@@ -1,0 +1,6 @@
+github.com/dullgiulio/pingo v0.0.0-20151111190101-8b1949e35b5a h1:hxUGjnGTjWlrH+mG7wqwJYKtmKcZmmSYCjSf+nWgeTc=
+github.com/dullgiulio/pingo v0.0.0-20151111190101-8b1949e35b5a/go.mod h1:M1VZSWV1CHnqoST00aa9Ha4VL5btiDWraNL0yQwpUc8=
+github.com/pkg/profile v1.6.0 h1:hUDfIISABYI59DyeB3OTay/HxSRwTQ8rB/H83k6r5dM=
+github.com/pkg/profile v1.6.0/go.mod h1:qBsxPvzyUincmltOk6iyRVxHYg4adc0OFOv72ZdLa18=
+github.com/zhaopuyang/golang-tts v0.0.0-20200222030009-5c7c3b027c6c h1:6tmaDlun71Qhgqcy17qZbj7leuLYa3A1J5lRIEyD1Vg=
+github.com/zhaopuyang/golang-tts v0.0.0-20200222030009-5c7c3b027c6c/go.mod h1:siNFFefPkCQAj0eL/QdFhGKw0xvkoLp9qZk/CV4lsys=

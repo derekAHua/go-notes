@@ -5,10 +5,11 @@ import (
 	"time"
 )
 
+// 计时操作
 func main() {
 	tick := time.Tick(time.Second)
 	i := 1
-	for _ = range tick {
+	for range tick {
 		fmt.Println(i)
 		i++
 	}

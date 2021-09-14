@@ -28,7 +28,7 @@ func printGCStatus() {
 		case <-t.C:
 			debug.ReadGCStats(&s)
 			runtime.ReadMemStats(&m)
-			fmt.Printf("gc %d; last@%v; PauseTotal %v; nest_heap_size %v;\n", s.NumGC, s.LastGC, s.PauseTotal, m.NextGC)
+			fmt.Printf("gc %d; last@%v; PauseTotal %v; nest_heap_size %v; MSpanInuse %v; HeapObjects %v\n", s.NumGC, s.LastGC, s.PauseTotal, m.NextGC, m.MSpanInuse, m.HeapObjects)
 		}
 	}
 }

@@ -1,0 +1,36 @@
+goos: darwin
+goarch: arm64
+pkg: TestProject/gc
+BenchmarkGCLargeGs
+BenchmarkGCLargeGs/#g-100
+BenchmarkGCLargeGs/#g-100-8         	    8851	    132060 ns/op
+BenchmarkGCLargeGs/#g-100-8         	    8406	    136795 ns/op
+BenchmarkGCLargeGs/#g-100-8         	    8467	    136237 ns/op
+BenchmarkGCLargeGs/#g-100-8         	    8277	    139447 ns/op
+BenchmarkGCLargeGs/#g-100-8         	    8080	    141408 ns/op
+BenchmarkGCLargeGs/#g-1000
+BenchmarkGCLargeGs/#g-1000-8        	    5940	    207787 ns/op
+BenchmarkGCLargeGs/#g-1000-8        	    5370	    207300 ns/op
+BenchmarkGCLargeGs/#g-1000-8        	    5487	    224240 ns/op
+BenchmarkGCLargeGs/#g-1000-8        	    5532	    208804 ns/op
+BenchmarkGCLargeGs/#g-1000-8        	    5732	    210706 ns/op
+BenchmarkGCLargeGs/#g-10000
+BenchmarkGCLargeGs/#g-10000-8       	     973	   1049595 ns/op
+BenchmarkGCLargeGs/#g-10000-8       	     951	   1067830 ns/op
+BenchmarkGCLargeGs/#g-10000-8       	    1125	   1039493 ns/op
+BenchmarkGCLargeGs/#g-10000-8       	    1033	   1058894 ns/op
+BenchmarkGCLargeGs/#g-10000-8       	    1128	   1057069 ns/op
+BenchmarkGCLargeGs/#g-100000
+BenchmarkGCLargeGs/#g-100000-8      	     120	   9764818 ns/op
+BenchmarkGCLargeGs/#g-100000-8      	     122	   9833654 ns/op
+BenchmarkGCLargeGs/#g-100000-8      	     100	  10076356 ns/op
+BenchmarkGCLargeGs/#g-100000-8      	     100	  10076810 ns/op
+BenchmarkGCLargeGs/#g-100000-8      	     121	   9947572 ns/op
+BenchmarkGCLargeGs/#g-1000000
+BenchmarkGCLargeGs/#g-1000000-8     	      28	  43126661 ns/op
+BenchmarkGCLargeGs/#g-1000000-8     	      28	  42717201 ns/op
+BenchmarkGCLargeGs/#g-1000000-8     	      28	  42347985 ns/op
+BenchmarkGCLargeGs/#g-1000000-8     	      28	  41936375 ns/op
+BenchmarkGCLargeGs/#g-1000000-8     	      28	  41344446 ns/op
+PASS
+ok  	TestProject/gc	54.015s

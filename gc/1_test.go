@@ -1,6 +1,12 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"runtime"
+	"sync"
+	"testing"
+	"time"
+)
 
 // 查看GC信息
 func TestPrintGC(t *testing.T) {
@@ -27,4 +33,31 @@ func TestSeeTraceAndHeap(t *testing.T) {
 
 func TestSeeTraceAndHeapChange(t *testing.T) {
 	SeeTraceAndHeapChange()
+}
+
+// 模拟 Too much GC
+// 执行：go test -bench=BenchmarkGCLargeGs -run=^$ -count=5 -v . | tee 4.txt
+func BenchmarkGCLargeGs(b *testing.B) {
+	wg := sync.WaitGroup{}
+	for ng := 100; ng <= 1000000; ng *= 10 {
+		b.Run(fmt.Sprintf("#g-%d", ng), func(b *testing.B) {
+			// 创建大量 goroutine，由于每次创建的 goroutine 会休眠
+			// 从而运行时不会复用正在休眠的 goroutine，进而不断创建新的 g
+			wg.Add(ng)
+			for i := 0; i < ng; i++ {
+				go func() {
+					time.Sleep(100 * time.Millisecond)
+					wg.Done()
+				}()
+			}
+			wg.Wait()
+			// 现运行一次 GC 来提供一致的内存环境
+			runtime.GC()
+			// 记录运行 b.N 次 GC 需要的时间
+			b.ResetTimer()
+			for i := 0; i < b.N; i++ {
+				runtime.GC()
+			}
+		})
+	}
 }

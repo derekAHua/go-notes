@@ -13,6 +13,7 @@ func SeeTraceAndHeapChange() {
 
 	http.HandleFunc("/ex", func(w http.ResponseWriter, r *http.Request) {
 		b := bufPool.Get().([]byte)
+		//b := bufPool
 		for idx := range b {
 			b[idx] = 1
 		}
@@ -25,3 +26,5 @@ func SeeTraceAndHeapChange() {
 var bufPool = sync.Pool{New: func() interface{} {
 	return make([]byte, 10<<20)
 }}
+
+//var bufPool = make([]byte, 10<<20)
